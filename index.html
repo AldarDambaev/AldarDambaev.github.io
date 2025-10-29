@@ -1,37 +1,41 @@
 <DOCTYPE html>
 <html lang="ru">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8"> 								<!--Кодирование-->
 		<title>Название проекта</title>
+		<link rel="stylesheet" href="styles/styles.css"> 	<!--Привязка к стилю-->
 	</head>
-	<body>
-		<header>
-			<a href="#"></a>
-			<nav>
-				<a href="#">Мероприятия</a>
-				<a href="#">Блог</a>
-				<a href="#">О нас</a>
-				<a href="#">Контакты</a>
+	<body class="body">
+		<header class="page-header">
+			<a class="page-header__logo" href="#">Logo</a>
+			<nav class="page-header__nav">
+				<a class="page-header__nav-link" href="#">Мероприятия</a>
+				<a class="page-header__nav-link" href="#">Блог</a>
+				<a class="page-header__nav-link" href="#">О нас</a>
+				<a class="page-header__nav-link" href="#">Контакты</a>
 			</nav>
+			<a class="page-header__user-link" href="#">Войти</a>
 		</header>
-		<main>
-			<header>
-				<h1>Заголовок главной обложки</h1>
-			</header>
-			<section>
-				<h2>О нас</h2>
-			</section>
-			<section>
-				<h2>Мероприятия</h2>
-			</section>
-			<section>
-				<h2>Блог</h2>
-			</section>
-			<section>
-				<h2>Контакты</h2>
-			</section>
+		<main class="main">
+			<div class="home">
+				<header class="main-header home__main-header">
+					<h1>Заголовок главной обложки</h1>
+				</header>
+				<section class="about home__about">
+					<h2>О нас</h2>
+				</section>
+				<section>
+					<h2 class="events home__events">Мероприятия</h2>
+				</section>
+				<section class="blog home__blog">
+					<h2>Блог</h2>
+				</section>
+				<section class="contacts home__contacts">
+					<h2>Контакты</h2>
+				</section>
+			</div>
 		</main>
-		<footer>
-			
-		</footer>
+		<footer class="page-footer"></footer>
 	</body>
+
+	</html>
