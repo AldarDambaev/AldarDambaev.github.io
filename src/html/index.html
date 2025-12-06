@@ -10,12 +10,15 @@
 			<h1>Заголовок главной обложки</h1>
 		</header>
 		@@include('blocks/about.html')
+		<!-- prettier-ignore-->
 		<section>
 			<h2 class="events home__events">Мероприятия</h2>
 		</section>
+		<!-- prettier-ignore-->
 		<section class="blog home__blog">
-			<h2>Блог</h2>
+			@@include('blocks/blog-listing.html', {"class": "home__listing"})
 		</section>
+		<!-- prettier-ignore-->
 		<section class="contacts home__contacts">
 			<h2>Контакты</h2>
 		</section>

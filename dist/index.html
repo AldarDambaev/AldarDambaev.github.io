@@ -14,11 +14,11 @@
 <body class="body">
   <header class="page-header">
     <div class="page-header__container">
-      <a class="page-header__logo" href="#">
+      <a class="page-header__logo" href="index.html">
         <img src="assets/images/logo.svg" class="page-header__logo-icon" alt="logo" />
       </a>
       <nav class="page-header__nav">
-        <a class="page-header__nav-link" href="#">Мероприятия</a>
+        <a class="page-header__nav-link" href="events.html">Мероприятия</a>
         <a class="page-header__nav-link" href="#">Блог</a>
         <a class="page-header__nav-link" href="#">О нас</a>
         <a class="page-header__nav-link" href="#">Контакты</a>
@@ -34,27 +34,49 @@
         <h1>Заголовок главной обложки</h1>
       </header>
       <section class="about home__about">
-        <h2>О нас</h2>
+        <h2 class="section-title">О нас</h2>
         <div class="about__container"></div>
         <div class="about__block1"></div>
         <div class="about__block2">
           <picture class="about__picture">
-            <img src="../../images/pic.jpg" class="about__img" alt="pic">
+            <img src="assets/images/pic.jpg" class="about__img" alt="pic">
           </picture>
           <h3 class="about__title">Мы предоставляем площади для вашего мероприятия </h3>
           <picture class="about__picture2">
-            <img src="C:\Users\aldar\OneDrive\Рабочий стол\Lenni\AldarDambaev.github.io\src\assets\images\pic2.jpg" class="about__img" alt="pic">
+            <img src="assets/images/pic2.jpg" class="about__img" alt="pic">
           </picture>
           <p class="about__text">И оказываем помощь с организацией, если вам это нужно.
             Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.</p>
         </div>
       </section>
+      <!-- prettier-ignore-->
       <section>
         <h2 class="events home__events">Мероприятия</h2>
       </section>
+      <!-- prettier-ignore-->
       <section class="blog home__blog">
-        <h2>Блог</h2>
+        <section class="listing home__listing">
+          <h2 class="section-title listing__title">
+            Блог
+          </h2>
+          <div class="listing__article-list">
+            <!--prettier-ignore-->
+            @@loop('article-card.html', [
+            {
+            "class":"";
+            "img":"";
+            "alt":"";
+            "descr":"";
+            "time":"";
+            "datatime":"";
+            }
+            ])
+          </div>
+          <a href="#" class="listing__link">Смотреть все</a>
+        </section>
+
       </section>
+      <!-- prettier-ignore-->
       <section class="contacts home__contacts">
         <h2>Контакты</h2>
       </section>
