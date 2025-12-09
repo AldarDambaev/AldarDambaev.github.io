@@ -2,6 +2,10 @@
         <clipPath id="a">
             <path fill="#FFF" d="M0 19.001h70v24H0z"/>
         </clipPath>
+    
+        <clipPath id="a">
+            <path fill="#FFF" d="M18 18h24v24H18z"/>
+        </clipPath>
     </defs><symbol id="arrow" viewBox="0 0 92 62.003"><g fill="none">
     
     <path d="M0 1.001h91v60H0z"/>
@@ -9,5 +13,13 @@
     <g clip-path="url(#a)">
         <path d="M0 19.001h70v24H0z"/>
         <path d="M5 31.002h60M58 24.002l7 7-7 7" stroke="#1F1E1E" stroke-width="2"/>
+    </g>
+</g></symbol><symbol id="x"><g fill="none">
+    
+    <path fill="none" d="M0 0h60v60H0z"/>
+    <circle cx="30" cy="30" r="30" fill="#1F1E1E"/>
+    <g clip-path="url(#a)">
+        <path d="M18 18h24v24H18z"/>
+        <path d="M36 24 24 36M24 24l12 12" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
 </g></symbol></svg>

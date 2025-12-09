@@ -1,20 +1,24 @@
-// 1. Переменные и миксины (самые первые)
+@import "global/common.less";
 @import "global/variables.less";
 @import "global/fonts.less";
 
-// 2. Глобальные стили
-@import "global/common.less";
+//@import "vendor/";
 
-// 3. Базовые компоненты (кнопки, заголовки)
 @import "blocks/btn.less";
+@import "blocks/x-btn.less";
+@import "blocks/field.less";
+@import "blocks/form.less";
 @import "blocks/section-title.less";
-
-// 4. Конкретные блоки
-@import "blocks/event-card.less";
-@import "blocks/about.less";
 @import "blocks/page-header.less";
-@import "blocks/listing.less";
+@import "blocks/about.less";
 @import "blocks/reserve.less";
+@import "blocks/listing.less";
+@import "blocks/event-card.less";
+@import "blocks/article-card.less";
+@import "blocks/pp.less";
+
 @import "blocks/event.less";
 @import "blocks/home.less";
-@import "blocks/article-card.less";
+@import "blocks/events.less";
+
+@import "global/mixins.less";

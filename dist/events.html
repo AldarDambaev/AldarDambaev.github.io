@@ -15,7 +15,9 @@
   <header class="page-header">
     <div class="page-header__container">
       <a class="page-header__logo" href="index.html">
-        <img src="assets/images/logo.svg" class="page-header__logo-icon" alt="logo" />
+        <svg class="page-header__logo-icon" width="202" height="147">
+          <use xlink:href="assets/images/logo.svg">
+        </svg>
       </a>
       <nav class="page-header__nav">
         <a class="page-header__nav-link" href="events.html">Мероприятия</a>
@@ -81,6 +83,59 @@
     </div>
   </main>
   <footer class="page-footer"></footer>
+  <div class="pp" id="eventPP">
+    <div class="pp__wrapper">
+      <div class="pp__sticky-close">
+        <button type="button" class="pp_x-btn x-btn">
+          <svg class="x-btn__icon" width="12" height="12">
+            <use xlink:href="assets/images/symbols.svg#x">
+          </svg>
+        </button>
+      </div>
+      <div class="pp__container">
+        <h2 class="pp__title">
+          Заполните форму
+          <br />
+          и мы подберем площадку
+        </h2>
+        <form class="pp_form form">
+          <h5 class="form__title">Контактные данные:</h5>
+          <div class="form__list">
+            <label class="field form__field form__field--w50">
+              <span class="field__label">Имя*</span>
+              <input class="field__input" type="text" name="name" placeholder="Имя" required />
+            </label>
+          </div>
+          <div class="form__list">
+            <label class="field form__field form__field--w50">
+              <span class="field__label">Фамилия*</span>
+              <input class="field__input" type="text" name="surname" placeholder="Фамилия" required />
+            </label>
+          </div>
+          <div class="form__list">
+            <label class="field form__field form__field--w50">
+              <span class="field__label">Телефон*</span>
+              <input class="field__input" type="tel" name="phone" placeholder="Телефон" required />
+            </label>
+          </div>
+          <div class="form__list">
+            <label class="field form__field form__field--w50">
+              <span class="field__label">Email*</span>
+              <input class="field__input" type="email" name="email" placeholder="Email" required />
+            </label>
+          </div>
+
+          <label class="field form__field">
+            <span class="field__title">
+              Есть пожелания? Напишите нам:
+            </span>
+            <textarea class="field__textarea" name="Пожелания"></textarea>
+          </label>
+
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
