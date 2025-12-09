@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="show-event-popup">
 <link rel="stylesheet" href="styles/styles.min.css">
 
 <head>
@@ -84,6 +84,7 @@
       </section>
     </div>
   </main>
+  <footer class="page-footer"></footer>
   <div class="pp" id="eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
@@ -100,6 +101,19 @@
           и мы подберем площадку
         </h2>
         <form class="pp_form form">
+
+          <label class="field">
+            <span class="field__title">
+              Планируемое количество посетителей:
+            </span>
+            <select class="field__select" name="amount">
+              <option value="20">до 20 человек</option>
+              <option value="100">от 20 до 100 человек</option>
+              <option value="500">от 100 до 500 человек</option>
+              <option value="1000">более 500 человек</option>
+            </select>
+          </label>
+
           <h5 class="form__title">Контактные данные:</h5>
           <div class="form__list">
             <label class="field form__field form__field--w50">
@@ -137,8 +151,6 @@
       </div>
     </div>
   </div>
-  <footer class="page-footer"></footer>
-
 </body>
 
 </html>

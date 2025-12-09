@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 90px 90px 50px;
+    padding: 90px 95px 50px;
     backdrop-filter: blur(50px);
     background: rgba(28, 27, 27, 0.4);
     overflow-y: auto;
@@ -22,9 +22,9 @@
         margin: auto;
         background-color: #dedede;
         background-image: url(../assets/images/noise.png);
-        background-position: 0 0, 0 0;
-        background-size: auto, 100% auto ;
-        background-repeat:repeat, repeat-y ;
+        background-position: 0 0;
+        background-size: auto;
+        background-repeat:repeat, repeat;
     }
     &__sticky-close {
         position: static;
@@ -40,16 +40,20 @@
     }
     &__container {
         box-sizing: border-box;
-        max-width: 1040px;
+        max-width: 950px;
         width: 100%;
         margin: 0 auto;
         padding: 0 40px 40px;
     }
     &__title {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
         position: relative;
-        margin: -40px 0 70px;
+        margin: -40px 0 70px -85px;
         padding: 10px 85px;
         max-width: 595px;
+        min-height: 80px;
         width: 100%;
         background-color: @black;
         text-transform: uppercase;

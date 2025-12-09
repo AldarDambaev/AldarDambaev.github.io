@@ -181,7 +181,8 @@ textarea {
           flex-direction: column;
 }
 .field__input,
-.field__textarea {
+.field__textarea,
+.field__select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -610,7 +611,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 90px 90px 50px;
+  padding: 90px 95px 50px;
   backdrop-filter: blur(50px);
   background: rgba(28, 27, 27, 0.4);
   overflow-y: auto;
@@ -633,9 +634,9 @@ textarea {
   margin: auto;
   background-color: #dedede;
   background-image: url(../assets/images/noise.png);
-  background-position: 0 0, 0 0;
-  background-size: auto, 100% auto ;
-  background-repeat: repeat, repeat-y;
+  background-position: 0 0;
+  background-size: auto;
+  background-repeat: repeat, repeat;
 }
 .pp__sticky-close {
   position: static;
@@ -653,16 +654,25 @@ textarea {
 .pp__container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 1040px;
+  max-width: 950px;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px 40px;
 }
 .pp__title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  margin: -40px 0 70px;
+  margin: -40px 0 70px -85px;
   padding: 10px 85px;
   max-width: 595px;
+  min-height: 80px;
   width: 100%;
   background-color: #1f1e1e;
   text-transform: uppercase;
