@@ -210,9 +210,32 @@ textarea {
 }
 .field__title {
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 18px;
+}
+.field__date-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 55px;
+  gap: 15px;
+}
+.field__date-input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 17px 13px 16px;
+  text-align: center;
+}
+.field__date-input--year {
+  width: 110px;
 }
 .radio {
   display: -webkit-box;
@@ -268,10 +291,16 @@ textarea {
   height: 23px;
   border-radius: 50%;
   border: 2px solid #1f1e1e;
+  padding: 3px;
   background-clip: content-box;
   background-color: transparent;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+}
+.radio__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
 }
 .form__list {
   display: -webkit-box;
@@ -281,16 +310,22 @@ textarea {
       flex-wrap: wrap;
   gap: 0px 60px;
 }
-.form__field {
+.form__field,
+.form__group {
   margin: 0 0 30px;
   width: 100%;
 }
-.form__field--w50 {
+.form__field--w50,
+.form__group--w50 {
   width: calc(50% - 30px);
+}
+.form__field--w50--m0,
+.form__group--w50--m0 {
+  margin: 0;
 }
 .form__title {
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 18px;
 }
