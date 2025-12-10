@@ -144,6 +144,9 @@ textarea {
   color: #ffffff;
 }
 .x-btn {
+  position: absolute;
+  top: -30px;
+  right: -30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,6 +165,7 @@ textarea {
   background-color: #1f1e1e;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+  background-image: 'assets/svg-sprite/close.svg';
 }
 .x-btn:hover,
 .x-btn:active {
@@ -210,13 +214,73 @@ textarea {
   font-weight: 700;
   font-size: 18px;
 }
+.radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.radio__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 23px;
+  padding-left: 45px;
+  color: #1f1e1e;
+  cursor: pointer;
+}
+.radio__input {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.radio__input:checked ~ .radio__mark {
+  background-color: #1f1e1e;
+}
+.radio__mark {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid(#1f1e1e);
+  padding: 3px;
+  background-clip: content-box;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
 .form__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px 60px;
+  gap: 0px 60px;
 }
 .form__field {
   margin: 0 0 30px;
@@ -611,7 +675,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 90px 95px 50px;
+  padding: 200px 90px 50px;
   backdrop-filter: blur(50px);
   background: rgba(28, 27, 27, 0.4);
   overflow-y: auto;
@@ -636,7 +700,7 @@ textarea {
   background-image: url(../assets/images/noise.png);
   background-position: 0 0;
   background-size: auto;
-  background-repeat: repeat, repeat;
+  background-repeat: repeat, repeat ;
 }
 .pp__sticky-close {
   position: static;
@@ -654,25 +718,16 @@ textarea {
 .pp__container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 950px;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px 40px;
 }
 .pp__title {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
-  margin: -40px 0 70px -85px;
+  margin: -40px 0 70px;
   padding: 10px 85px;
   max-width: 595px;
-  min-height: 80px;
   width: 100%;
   background-color: #1f1e1e;
   text-transform: uppercase;
@@ -719,8 +774,22 @@ textarea {
 .show-event-popup body {
   overflow: hidden;
 }
-.show-event-popup .eventPP {
+.show-event-popup #eventPP {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.is-hidden {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }

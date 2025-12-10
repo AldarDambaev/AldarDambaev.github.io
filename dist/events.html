@@ -88,7 +88,7 @@
       <div class="pp__sticky-close">
         <button type="button" class="pp_x-btn x-btn">
           <svg class="x-btn__icon" width="12" height="12">
-            <use xlink:href="assets/images/symbols.svg#x">
+            <use xlink:href="assets/icons/symbols.svg#close">
           </svg>
         </button>
       </div>
@@ -99,6 +99,38 @@
           и мы подберем площадку
         </h2>
         <form class="pp_form form">
+
+          <span class="field__title">
+            Тип мероприятия:
+          </span>
+
+          <div class="radio">
+            <div class="radio__column">
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="seminar" checked>
+                <span class="radio__mark"></span>
+                <span class="radio__label">Мастер-класс/семинар</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="concert">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Концерт/выступление</span>
+              </label>
+            </div>
+            <div class="radio__column">
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="show">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Выставка/показ</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="other">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Другое</span>
+              </label>
+            </div>
+          </div>
+
 
           <label class="field">
             <span class="field__title">
@@ -113,25 +145,25 @@
           </label>
 
           <h5 class="form__title">Контактные данные:</h5>
+
           <div class="form__list">
             <label class="field form__field form__field--w50">
               <span class="field__label">Имя*</span>
               <input class="field__input" type="text" name="name" placeholder="Имя" required />
             </label>
-          </div>
-          <div class="form__list">
+
             <label class="field form__field form__field--w50">
               <span class="field__label">Фамилия*</span>
               <input class="field__input" type="text" name="surname" placeholder="Фамилия" required />
             </label>
           </div>
+
           <div class="form__list">
             <label class="field form__field form__field--w50">
               <span class="field__label">Телефон*</span>
               <input class="field__input" type="tel" name="phone" placeholder="Телефон" required />
             </label>
-          </div>
-          <div class="form__list">
+
             <label class="field form__field form__field--w50">
               <span class="field__label">Email*</span>
               <input class="field__input" type="email" name="email" placeholder="Email" required />
