@@ -1007,6 +1007,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #1f1e1e;
   font-weight: 600;
+  text-align: left;
 }
 .content h1:first-child,
 .content h2:first-child,
@@ -1227,6 +1228,10 @@ body {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .event {
   padding: 40px 0 150px;
