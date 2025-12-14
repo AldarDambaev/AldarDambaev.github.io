@@ -158,6 +158,14 @@ textarea {
   border-color: #bc3324;
   color: #ffffff;
 }
+.Lenni {
+  width: 100% !important;
+  /* Растянуть на всю ширину */
+  height: auto !important;
+  /* Автоматическая высота для сохранения пропорций */
+  display: block !important;
+  /* Убрать лишние отступы */
+}
 .x-btn {
   position: absolute;
   top: -30px;
@@ -809,56 +817,45 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  padding-bottom: 120px;
 }
 .article-card:hover .article-card__picture {
-  -webkit-box-shadow: 0px 0px 30px 0px rgba(31, 31, 30, 0.55);
-          box-shadow: 0px 0px 30px 0px rgba(31, 31, 30, 0.55);
-}
-.article-card ~ .article-card {
-  margin-top: 120px;
-}
-.article-card ~ .article-card::before {
-  content: '';
-  display: block;
-  position: absolute;
-  margin: 0 auto 60px;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  max-width: 1255px;
-  width: 100%;
-  height: 1px;
-  background-color: #1f1e1e;
-  pointer-events: none;
+  -webkit-box-shadow: 0 0 30px rgba(31, 30, 30, 0.55);
+          box-shadow: 0 0 30px rgba(31, 30, 30, 0.55);
 }
 .article-card__link {
-  width: 467px;
-  text-decoration: none;
-  font-size: 0;
-  margin-right: 60px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   display: block;
-}
-.article-card__link:hover ~ .article-card__info .article-card__title-link {
-  color: #bc3324;
-  text-decoration-color: #bc3324;
+  width: 467px;
+  margin-right: 60px;
+  font-size: 0;
+  text-decoration: none;
 }
 .article-card__picture {
   display: block;
   position: relative;
   width: 100%;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   overflow: hidden;
 }
 .article-card__picture::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
-  padding-top: 62.715%;
+  padding-top: 62.3126%;
 }
 .article-card__img {
   display: block;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -878,13 +875,13 @@ body {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding: 30px 0;
   padding-right: 150px;
 }
 .article-card__time {
-  margin-bottom: 0 0 40px;
-  color: #1f1e1e;
-  font-size: 16px;
+  margin: 0 0 40px;
   font-weight: 300;
+  font-size: 16px;
   line-height: 22px;
 }
 .article-card__title-link,
@@ -904,17 +901,41 @@ body {
 }
 .article-card__title {
   margin: 0;
+  color: inherit;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
 }
 .article-card__description {
   margin: 0;
+  font-size: 16px;
+  line-height: 22px;
 }
 .article-card__arrow {
   position: absolute;
   right: 0;
   bottom: 30px;
+  color: inherit;
+  -webkit-transition: none;
+  transition: none;
+}
+.article-card:hover ~ .article-card__info .article-card__title-link {
+  color: #bc3324;
+  text-decoration-color: #bc3324;
+}
+.article-card:hover + .article-card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: 0 auto 60px;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1254px;
+  height: 1px;
+  background-color: #1f1e1e;
+  pointer-events: none;
 }
 .pp {
   -webkit-box-sizing: border-box;
