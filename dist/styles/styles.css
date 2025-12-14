@@ -452,7 +452,7 @@ textarea {
   color: #bc3324;
 }
 body {
-  padding: 0;
+  padding-top: 147px;
   margin: 0;
   background-color: #dedede;
   font-family: "Open Sans", sans-serif;
@@ -1244,7 +1244,7 @@ body {
   text-decoration: none;
 }
 .home {
-  padding: 100px 0;
+  padding: 147px 0;
 }
 .home__listing {
   margin-bottom: 95px;

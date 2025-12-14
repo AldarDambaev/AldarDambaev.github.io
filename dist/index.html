@@ -63,16 +63,31 @@
           </h2>
           <div class="listing__article-list">
             <!--prettier-ignore-->
-            @@loop('article-card.html', [
-            {
-            "class":"";
-            "img":"";
-            "alt":"";
-            "descr":"";
-            "time":"";
-            "datatime":"";
-            }
-            ])
+            <article class="artical-card ">
+              <a href="#" class="article-card__link">
+                <picture class="article-card__picture">
+                  <img src="" alt="" class="article-card__img">
+                </picture>
+              </a>
+              <div class="article-card__info">
+                <time datetime="@@datetime" class="article-card__time">
+
+                </time>
+                <a href="#" class="article-card__title-link">
+                  <h4 class="article-card__title">
+                    @@title
+                  </h4>
+                  <span class="article-card__arrow arrow">
+                    <svg class="arrow__icon" width="91" height="60">
+                      <use xlink:href="assets/icons/symbols.sgv#arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+                <p class="article-card__description">
+
+                </p>
+              </div>
+            </article>
           </div>
           <a href="#" class="listing__link">Смотреть все</a>
         </section>
