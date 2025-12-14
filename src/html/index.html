@@ -7,14 +7,30 @@
 	<main class="main">
 	<div class="home">
 		<header class="main-header home__main-header">
-			<img class="Lenni" src="assets/favicons/LENNI.svg" alt="LENNI">
-
+			<div class="art">
+                    <div class="art__text1"> 
+                        <p class="art__text2">арт — пространство</p>
+                    </div>
+                    <img class="Lenni" src="assets/favicons/LENNI.svg" alt="LENNI">
+                    <div class="art__text3"> 
+                        <p class="art__text4">для людей, горящих сердцЕМ и делом<br>место для настоящего</p>
+                    </div>
+                    <div class="want">
+                        <p class="want__text">я хочу:</p>
+                    </div>
+                    <div class="want__btns">
+						<a href="#" class="btn want__btn--event">
+                            <span class="want__btn-text">Провести мероприятие</span>
+                        </a>
+                        <a href="#" class="btn want__btn--rent">
+                            <span class="want__btn-text">Стать арендатором</span>
+                        </a>
+                        
+                    </div>
 		</header>
 		@@include('blocks/about.html')
 		<!-- prettier-ignore-->
-		<section>
-			<h2 class="events home__events">Мероприятия</h2>
-		</section>
+		@@include('blocks/home-events.html')
 		<!-- prettier-ignore-->
 		<section class="blog home__blog">
 			@@include('blocks/blog-listing.html', {"class": "home__listing"})

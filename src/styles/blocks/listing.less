@@ -11,11 +11,15 @@
     &__events-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 120px 60px;
+    gap: 120px 58px;
+    @media @bw1660{
+       gap: 90px 40px; 
+    }
 
     }
     &__event-card{
-    width: calc(33.333% - 40px);
+    width: calc(33.333% - 58px);
+
     
     }
 

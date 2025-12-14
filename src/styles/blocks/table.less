@@ -8,22 +8,57 @@ body {
 .table {
   width: 100%;
   border-collapse: collapse;
-  color: #1F1E1E;
+  color: @black;
   text-align: center;
+  
+  @media @bw768 {
+    display: block;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+  }
+  &__head-tr {
+    @media @bw768 {
+      display: flex;
+      width: 100%;
+
+    }
+  }
+
   &__tr {
     &:nth-child(2n-1) {
       background-color: fade(#1F1E1E, 3%);
+      @media @bw768 {
+        background-color: transparent;
+      }
     }
+    @media @bw768 {
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
+
   }
+
   &__th {
     height: 85px;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
+    @media @bw768 {
+      font-size: 14px;
+      line-height: 19px;
+      width: 33.3333%;
+      
+    }
   }
   &__footer-th {
     height: 60px;
     font-size: 0;
+    @media @bw768 {
+      font-size: 16px;
+      font-weight: 300;
+      width: 33.3333%;
+    }
   }
   &__th,
   &__footer-th {
@@ -31,14 +66,25 @@ body {
     padding: 10px;
     border-right: 1px solid #BFBFBF;
     text-transform: uppercase;
+    
+    @media @bw768 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
     &:first-child {
       padding-left: 0;
+      @media @bw768 {
+        display: none;
+      }
     }
     &:last-child {
       border-right: none;
       padding-right: 0;
     }
   }
+
   &__body-th {
     box-sizing: border-box;
     height: 50px;
@@ -49,6 +95,14 @@ body {
     font-size: 18px;
     line-height: 25px;
     text-align: left;
+    @media @bw768 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 600px;
+    }
   }
   &__td {
     box-sizing: border-box;
@@ -58,10 +112,29 @@ body {
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-
+    @media @bw768 {
+      width: 33.3333%;
+    }
     &:last-child {
       border-right: none;
       padding-right: 0;
+    }
+    &:nth-child(2n-1) {
+      @media @bw768 {
+        background-color: fade(@black, 3%);
+      }
+    }
+  }
+  &__head,
+  &__body,
+  &__footer {
+    @media @bw768 {
+      display: block;
+    }
+  }
+  &__footer-tr {
+    @media @bw768 {
+      display: flex;
     }
   }
 }
@@ -87,4 +160,6 @@ body {
     border-bottom: 2px solid #ffffff;
     transform: rotate(45deg);
   }
+
+  
 }
