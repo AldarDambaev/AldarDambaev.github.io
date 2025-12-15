@@ -126,17 +126,23 @@ textarea {
 .art__text1 {
   width: 518px;
   height: 57px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 701px;
+  /* Центрирование по горизонтали */
+  text-align: center;
+  /* Центрирование текста внутри элементов */
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  /* Центрирование всего блока */
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 70px;
 }
 .art__text2 {
@@ -152,18 +158,26 @@ textarea {
 .art__text3 {
   width: 990px;
   height: 116px;
-  margin-left: 465px;
-  margin-top: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* Центрирование по горизонтали */
+  text-align: center;
+  /* Центрирование текста внутри элементов */
+  width: 100%;
+  max-width: 1920px;
+  margin-bottom: 100px;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 70px ;
 }
 .art__text4 {
   color: #1f1e1e;
@@ -176,22 +190,21 @@ textarea {
   text-transform: uppercase;
 }
 .want {
-  margin-top: 100px;
-  margin-bottom: 46px;
-  margin-right: 906px;
-  margin-left: 924px;
   width: 90px;
   height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+  width: 100%;
+  max-width: 1920px;
+  margin-bottom: 46px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .want__text {
   color: #1f1e1e;
@@ -220,11 +233,20 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Центрирование по горизонтали */
+  text-align: center;
+  /* Центрирование текста внутри элементов */
   width: 100%;
-  margin-bottom: 100px;
-  margin-left: 648px;
-  margin-right: 648px;
+  max-width: 1920px;
+  margin-bottom: 46px;
+  margin-left: 643px ;
+  margin-right: 648px ;
   gap: 106px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .want__btn {
   text-decoration: none;
@@ -301,13 +323,6 @@ textarea {
   background-color: #bc3324;
   border-color: #bc3324;
   color: #ffffff;
-}
-.Lenni {
-  display: block;
-  margin: 0;
-  padding: 0;
-  height: 325px;
-  width: 100%;
 }
 .x-btn {
   position: absolute;
@@ -704,7 +719,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto 150px;
+  margin: 0 355px 150px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -749,8 +764,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 1414px;
-  margin: 0 auto;
+  max-width: 1920px;
+  margin: 0;
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -779,12 +794,19 @@ body {
   height: 147px;
   font-size: 0;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .page-header__logo-icon {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: inherit;
+  height: inherit;
 }
 .about {
   max-width: 1334px;
@@ -1543,6 +1565,23 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .page-header {
+    height: 111px;
+  }
+  .page-header__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .page-header__nav-link {
+    font-size: 0px;
+  }
+  .page-header__right-block {
+    width: 150px;
+  }
+  .page-header__logo {
+    width: 152px;
+    height: 111px;
   }
   .article__container {
     padding-left: 20px;
