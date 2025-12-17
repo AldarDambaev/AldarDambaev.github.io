@@ -930,6 +930,16 @@ body {
   max-width: 100%;
   min-width: 280px;
 }
+.event-card__title-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none ;
+}
 .event-card__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -940,7 +950,6 @@ body {
           flex-direction: column;
   width: 100%;
   color: #1f1e1e;
-  text-decoration: none ;
 }
 .event-card__link:hover .event-card__title {
   color: #bc3324;
