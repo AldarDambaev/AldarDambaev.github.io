@@ -77,5 +77,27 @@
         width: inherit;
         height: inherit;
     }
+    &__menu {
+        display: none;
+        @media @bw768 {
+            display: block;
+            width: 24px;
+            height: 24px;
+
+        }
     }
+    &__user {
+        width: 0;
+        @media @bw768 {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__btn {
+        @media @bw768 {
+            display: none;
+        }
+    }
+    }
+
 
