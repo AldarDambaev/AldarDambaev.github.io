@@ -7,15 +7,30 @@
     "checks scheme"
     "order legend";
     width: 100%;
+    margin-top: 837px;
+    padding-left: 293px;
+    @media @bw768 {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+    }
 
     &__checks{
         grid-area: checks;
-        background-color: yellow;
+
     }
 
     &__scheme{
         grid-area: scheme;
-        background-color: orange;
+        @media @bw768 {
+            max-width: 80%;
+            margin-left: 50px;
+        }
+        
+
+    }
+    &__scheme-scene {
+        margin-left: 168px;
     }
 
     &__order{
