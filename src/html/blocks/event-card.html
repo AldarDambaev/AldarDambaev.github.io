@@ -1,6 +1,11 @@
 <article class="event-card  @@class">
   <div class="event-card__link">
     <picture class="event-card__picture">
+      <source type="image/webp" media="(max-width: 280px)" srcset="@@img"/>
+      <source media="(max-width: 280px)" srcset="@@img"/>
+      <source type="image/webp" media="(max-width: 767px)" srcset="@@img_tablet"/>
+
+      <source type="image/webp" srcset="@@img_webp" />
       <img src="@@img" alt="@@alt" class="event-card__img" />
     </picture>
     <a href="event.html" class="event-card__title-link">

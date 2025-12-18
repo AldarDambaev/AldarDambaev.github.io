@@ -1070,7 +1070,7 @@ body {
   width: 100%;
   padding-bottom: 120px;
 }
-.article-card:hover .article-card__picture {
+.article-card:active .article-card__picture {
   -webkit-box-shadow: 0 0 30px rgba(31, 30, 30, 0.55);
           box-shadow: 0 0 30px rgba(31, 30, 30, 0.55);
 }
@@ -1086,7 +1086,9 @@ body {
   text-decoration: none;
 }
 .article-card__picture {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   width: 100%;
   -webkit-transition: -webkit-box-shadow 0.2s;
@@ -1865,6 +1867,13 @@ body {
   .reserve__scheme {
     max-width: 80%;
     margin-left: 50px;
+  }
+  .article-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 708px;
   }
   .article__container {
     padding-left: 20px;
