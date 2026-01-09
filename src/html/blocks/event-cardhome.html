@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<link rel="stylesheet" href="styles/styles.min.css">
-@@include('blocks/head.html')
-<body class="body">
-    @@include('blocks/page-header.html')
-	<main class="main">
-	<div class="home">
-		<header class="main-header home__main-header">
-			<div class="art">
-                    <div class="art__text1"> 
-                        <p class="art__text2">арт — пространство</p>
-                    </div>
-                    <img class="Lenni" src="assets/favicons/LENNI.svg" alt="LENNI">
-                    <div class="art__text3"> 
-                        <p class="art__text4">для людей, горящих сердцЕМ и делом<br>место для настоящего</p>
-                    </div>
-                    <div class="want">
-                        <p class="want__text">я хочу:</p>
-                    </div>
-                    <div class="want__btns">
-						<a href="#" class="btn want__btn--event">
-                            <span class="want__btn-text">Провести мероприятие</span>
-                        </a>
-                        <a href="#" class="btn want__btn--rent">
-                            <span class="want__btn-text">Стать арендатором</span>
-                        </a>
-                        
-                    </div>
-		</header>
-		@@include('blocks/about.html')
-		<!-- prettier-ignore-->
-		 		
-	<section class="home__events">
+<section class="home__events">
 <h2 class="section-title section-title__events">Мероприятия</h2>
 	<div class="listing__events-list">
             <!-- prettier-ignore -->
@@ -73,20 +40,6 @@
                         "datetime": "2024-12-16T20:00",
                     }
                 ])
-        </div>
-			<a href="#" class="listing__link link">Смотреть все</a>
+            </div>
+			<a href="#" class="listing__link">Смотреть все</a>
 	</section>
-
-		
-		<!-- prettier-ignore-->
-		<section class="blog home__blog">
-			@@include('blocks/blog-listing.html', {"class": "home__listing"})
-		</section>
-		<!-- prettier-ignore-->
-		    @@include('blocks/contacts.html', {"class": "home__conta"})
-	</div>
-</main>
-	@@include('blocks/page-footer.html')
-	@@include('blocks/event-pp.html')
-</body>
-</html>
