@@ -225,6 +225,61 @@ textarea {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 50px;
+  border-left: 4px solid #bc3324;
+  gap: 22px;
+  text-indent: 22px;
+  margin-left: 300px;
+  margin-top: 60px;
+}
+.footer__nav-link {
+  color: #1f1e1e;
+  font-weight: 600;
+  font-size: 1.39;
+  text-decoration: none;
+}
+.footer__nav-link:hover {
+  color: #bc3324;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.lines-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* центрирование по горизонтали */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* центрирование по вертикали */
+  gap: 30px;
+  /* расстояние между линиями */
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+.line {
+  height: 2px;
+  width: 618px;
+}
+.line-138 {
+  background: -webkit-gradient(linear, right top, left top, from(#1c1b1b), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(270deg, #1c1b1b, rgba(255, 255, 255, 0) 100%);
+}
+.line-252 {
+  background: linear-gradient(135deg, #1c1b1b, rgba(255, 255, 255, 0) 100%);
+}
 .want__btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,6 +349,66 @@ textarea {
   line-height: 22px;
   letter-spacing: 0%;
   text-align: center;
+}
+.contacts__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 115px;
+}
+.contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 67px;
+}
+.contacts__content:last-child {
+  gap: 0;
+}
+.contacts__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 67px;
+}
+.contacts__slogan1 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -52px;
+  margin-right: -189px;
+  margin-top: -100px;
+}
+.contacts__slogan2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: -189px;
+  margin-bottom: 140px;
 }
 .btn {
   display: inline-block;
@@ -800,6 +915,12 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+.section-title__events {
+  margin-top: 110px;
+}
+.section-title__contacts {
+  margin-left: 648px;
+}
 .page-header {
   height: 147px;
   backdrop-filter: blur(20px);
@@ -906,6 +1027,16 @@ body {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+}
+.about__block1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
 }
 .about__block2 {
   display: grid;
@@ -1026,7 +1157,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 120px 58px;
-  margin-bottom: 297px;
+  margin-bottom: 130px;
 }
 .listing__event-card {
   width: calc(33.333% - 58px);
@@ -1036,7 +1167,11 @@ body {
 }
 .listing__link {
   display: block;
-  left: 100px;
+  padding-left: 1478px;
+  padding-right: 0;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 150px;
 }
 .event-card {
   display: -webkit-box;
@@ -1754,9 +1889,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .events {
   max-width: 1334px;
@@ -1797,6 +1929,9 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .footer__nav-link {
+    font-size: 0px;
+  }
   .table {
     display: block;
     margin: 0 -20px;
