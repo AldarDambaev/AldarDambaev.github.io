@@ -39,61 +39,134 @@
   </header>
   <main class="main">
     <div class="events">
-      <section class="listing events__listing">
-        <h2 class="listing__section-title section-title">Мероприятия</h2>
-        <div class="listing__events-list">
-          <!-- prettier-ignore -->
-          <article class="event-card  listing_event-card">
-            <div class="event-card__link">
-              <picture class="event-card__picture">
-                <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
-                <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
-                <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+      <section class="home__events">
+        <h2 class="section-title section-title__events">Мероприятия</h2>
 
-                <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
-                <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
-              </picture>
-              <a href="event.html" class="event-card__title-link">
-                <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
-                <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал</p>
-              </a>
-              <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | начало 18.00</time>
-            </div>
-          </article>
-          <article class="event-card  listing_event-card">
-            <div class="event-card__link">
-              <picture class="event-card__picture">
-                <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
-                <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
-                <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+        <div class="events-slider">
 
-                <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
-                <img src="assets/images/events/Nirvana.jpg" alt="card2" class="event-card__img" />
-              </picture>
-              <a href="event.html" class="event-card__title-link">
-                <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-                <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-              </a>
-              <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | начало 18.30</time>
-            </div>
-          </article>
-          <article class="event-card  listing_event-card">
-            <div class="event-card__link">
-              <picture class="event-card__picture">
-                <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
-                <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
-                <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
 
-                <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
-                <img src="assets/images/events/Nirvana.jpg" alt="card2" class="event-card__img" />
-              </picture>
-              <a href="event.html" class="event-card__title-link">
-                <h4 class="event-card__title">Вечер | The Best of Sade</h4>
-                <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-              </a>
-              <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+          <div class="slider-container">
+            <div class="listing__events-list slider-track">
+              <!-- prettier-ignore -->
+              <article class="event-card  listing_event-card slider-slide">
+                <div class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                    <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+                  <a href="event.html" class="event-card__title-link">
+                    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал</p>
+                  </a>
+                  <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | начало 18.00</time>
+                </div>
+              </article>
+              <article class="event-card  listing_event-card slider-slide">
+                <div class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                    <img src="assets/images/events/Nirvana.jpg" alt="card2" class="event-card__img" />
+                  </picture>
+                  <a href="event.html" class="event-card__title-link">
+                    <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                    <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                  </a>
+                  <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | начало 18.30</time>
+                </div>
+              </article>
+              <article class="event-card  listing_event-card slider-slide">
+                <div class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                    <img src="assets/images/events/Nirvana.jpg" alt="card2" class="event-card__img" />
+                  </picture>
+                  <a href="event.html" class="event-card__title-link">
+                    <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                  </a>
+                  <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+                </div>
+              </article>
             </div>
-          </article>
+            <div class="listing__events-list slider-track">
+              <!-- prettier-ignore -->
+              <article class="event-card  listing_event-card slider-slide">
+                <div class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                    <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+                  <a href="event.html" class="event-card__title-link">
+                    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал</p>
+                  </a>
+                  <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | начало 18.00</time>
+                </div>
+              </article>
+              <article class="event-card  listing_event-card slider-slide">
+                <div class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                    <img src="assets/images/events/Nirvana.jpg" alt="card2" class="event-card__img" />
+                  </picture>
+                  <a href="event.html" class="event-card__title-link">
+                    <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                    <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                  </a>
+                  <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | начало 18.30</time>
+                </div>
+              </article>
+              <article class="event-card  listing_event-card slider-slide">
+                <div class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source media="(max-width: 280px)" srcset="assets/images/events/Nirvana.jpg" />
+                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana_768.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                    <img src="assets/images/events/Nirvana.jpg" alt="card2" class="event-card__img" />
+                  </picture>
+                  <a href="event.html" class="event-card__title-link">
+                    <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                  </a>
+                  <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="slider-btn">
+            <button class="slider-btn slider-btn-prev" aria-label="Предыдущий слайд">
+              <img src="assets/images/link.png" alt="Предыдущий">
+            </button>
+            <button class="slider-btn slider-btn-next" aria-label="Следующий слайд">
+              <img src="assets/images/link.png" alt="Следующий">
+            </button>
+          </div>
+        </div>
+
+        <div class="view-all-container">
+          <a href="#" class="view-all-link">Смотреть все</a>
         </div>
       </section>
       <section class="events__services">
@@ -208,7 +281,7 @@
       </section>
     </div>
   </main>
-  <footer class="page-footer">
+  <footer class="footer">
 
     <div class="lines-container">
       <div class="line line-138"></div>
@@ -218,7 +291,7 @@
 
     <div class="footer__container">
       <!-- Левая колонка - Навигация -->
-      <div class="footer__column">
+      <div class="footer__column1">
         <nav class="footer__nav">
           <a href="#" class="footer__nav-link">Календарь мероприятий</a>
           <a href="#" class="footer__nav-link">Провести мероприятие</a>
@@ -226,7 +299,45 @@
           <a href="#" class="footer__nav-link">Наши проекты</a>
           <a href="#" class="footer__nav-link">Контакты</a>
         </nav>
+        <label class="footer__sub ">
+          <span class="field__label">
+            <b>Подпишись и будь в курсе происходящего</b>
+          </span>
+          <div class="footer__email">
+            <input class="footer__input" type="email" name="email" placeholder="Email" required />
+            <a href="#" class="footer__sub-btn">
+              <span>Подписаться</span>
+            </a>
+
+          </div>
+          <label class="check form__check">
+            <input class="check__input" type="checkbox" name="agree" required checked>
+            <span class="check__mark"></span>
+            <span class="check__label check__label--fz14">Согласен на обработку персональных данных</span>
+          </label>
+        </label>
       </div>
+      <div class="footer__column2">
+        <div class="footer__last1">
+          <p>© Millennials 2025</p>
+          <a href="#" class="footer__last1-conf">Политика конфиденциальности</a>
+        </div>
+        <div class="footer__last2">
+          <a href="#" class="footer__last2-cookie">Cookie</a>
+        </div>
+        <div class="footer__last3">
+          <img src="assets/images/vk.png" alt="vk">
+          <img src="assets/images/vk.png" alt="vk">
+        </div>
+        <div class="footer__last4">
+          <a href="#" class="footer__last2-cookie">Создание и продвижение</a>
+          <svg class="footer__dignity">
+            <use xlink:href="assets/images/dignity.svg">
+          </svg>
+        </div>
+      </div>
+
+    </div>
 
   </footer>
   <div class="pp" id="eventPP">

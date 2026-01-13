@@ -8,6 +8,7 @@
 	<div class="home">
 		<header class="main-header home__main-header">
 			<div class="art">
+                
                     <div class="art__text1"> 
                         <p class="art__text2">арт — пространство</p>
                     </div>
@@ -32,13 +33,18 @@
 		@@include('blocks/about.html')
 		<!-- prettier-ignore-->
 		 		
-	<section class="home__events">
-<h2 class="section-title section-title__events">Мероприятия</h2>
-	<div class="listing__events-list">
-            <!-- prettier-ignore -->
+<section class="home__events">
+    <h2 class="section-title section-title__events">Мероприятия</h2>
+    
+    <div class="events-slider">
+        
+        
+        <div class="slider-container">
+            <div class="listing__events-list slider-track">
+                <!-- prettier-ignore -->
                 @@loop('blocks/event-card.html', [
                     {
-                        "class": "listing_event-card",
+                        "class": "listing_event-card slider-slide",
                         "img": "assets/images/events/Nirvana.jpg",
                         "img_webp": "assets/images/events/Nirvana.webp",
                         "img_tablet": "assets/images/events/Nirvana_768.jpg",
@@ -50,7 +56,7 @@
                         "datetime": "2024-12-07T18:00",
                     },
                     {
-                        "class": "listing_event-card",
+                        "class": "listing_event-card slider-slide",
                         "img": "assets/images/events/Nirvana.jpg",
                         "img_webp": "assets/images/events/Nirvana.webp",
                         "img_tablet": "assets/images/events/Nirvana_768.jpg",
@@ -61,8 +67,8 @@
                         "time": "14.12.2024 | начало 18.30",
                         "datetime": "2024-12-14T18:30",
                     },
-					{
-                        "class": "listing_event-card",
+                    {
+                        "class": "listing_event-card slider-slide",
                         "img": "assets/images/events/Nirvana.jpg",
                         "img_webp": "assets/images/events/Nirvana.webp",
                         "img_tablet": "assets/images/events/Nirvana_768.jpg",
@@ -74,14 +80,23 @@
                         "datetime": "2024-12-16T20:00",
                     }
                 ])
+            </div>
         </div>
+        <div class="slider-btn">
+        <button class="slider-btn slider-btn-prev" aria-label="Предыдущий слайд">
+            <img src="assets/images/link.png" alt="Предыдущий">
+        </button>
+        <button class="slider-btn slider-btn-next" aria-label="Следующий слайд">
+            <img src="assets/images/link.png" alt="Следующий">
+        </button>
+    </div>
+    </div>
+    
+    <div class="view-all-container">
+        <a href="#" class="view-all-link">Смотреть все</a>
+    </div>
+</section>
 
-
-            <img src="assets\images\slider.png" alt="slider">
-			
-
-	</section>
-    <a href="#" class="listing__link link">Смотреть все</a>
 
 		
 		<!-- prettier-ignore-->
@@ -91,13 +106,14 @@
 		<!-- prettier-ignore-->
 		    @@include('blocks/contacts.html', {"class": "home__conta"})
 	</div>
+    <div class="contacts_slogans">
     	<div class="contacts__slogan1">
             <img class="slogan1" src="assets/images/slogan1.png" alt="slogan1">
         </div>
         <div class="contacts__slogan2">
             <img class="slogan2" src="assets/images/slogan2.png" alt="slogan2">
         </div>
-        
+        </div>
 </main>
 	@@include('blocks/page-footer.html')
 	@@include('blocks/event-pp.html')
