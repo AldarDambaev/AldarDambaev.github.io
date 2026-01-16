@@ -37,6 +37,29 @@
     
   }
 }
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+    }
+  }
+
+  .page-header__nav {
+    @media @bw1020 {
+      transform: translateX(0);
+    }
+  }
+
+  .page-header__nav-toggle {
+    &::before {
+      transform: translate(0px, 6px) rotate(45deg);
+      box-shadow: none;
+    }
+    &::after {
+      transform: translate(0px, -6px) rotate(-45deg);
+    }
+  }
+}
 
 .is-hidden {
   position: absolute !important;
@@ -51,4 +74,28 @@
   overflow: hidden !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+    }
+  }
+  .page-header__nav {
+    @media @bw1020 {
+      transform: translateX(0);
+    }
+  }
+  .page-header__menu {
+    @media @bw1020 {
+      &::before {
+        box-shadow: none;
+        transform: translate(0, 6px) rotate(45deg);
+      };
+      &::after {
+        transform: translate(0, -6px) rotate(-45deg);
+      }
+    }
+  }
 }
