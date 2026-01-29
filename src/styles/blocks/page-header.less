@@ -1,7 +1,5 @@
 .page-header {
     height: 147px;
-    backdrop-filter: blur(20px);
-    background: rgba(222, 222, 222, 0.5);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,18 +8,26 @@
     align-items: center; 
     justify-content: center;
     z-index: 1000;
-    @media @bw1020 {
+    @media @bw1660 {
         height: 111px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+            backdrop-filter: blur(20px);
+            background: rgba(222, 222, 222, 0.5);
 
     }
-    @media @bw768 {
-        height: 111px;
-
-    }
-    
     
 
     &__container {
+        position: relative;
         box-sizing: border-box;
         justify-content:space-between;
         display: flex;
@@ -31,6 +37,7 @@
         margin: 0; 
         padding-left: 40px;
         padding-right: 40px;
+        z-index: 1;
                 @media @bw1020 {
             padding-left: 20px;
             padding-right: 20px;
@@ -43,7 +50,7 @@
         }
     }
     &__nav{
-    display: flex;
+    display: flex; 
     gap: 50px;
     padding-left: -100px;
     @media @bw1020 {
@@ -93,6 +100,10 @@
         padding-right: 253px;
                 @media @bw1020 {
             width: 150px;
+            margin-left: auto;
+        }
+        @media @bw1660 {
+            width: 152px;
         }
         @media @bw768 {
             width: 150px;
@@ -125,38 +136,8 @@
         width: inherit;
         height: inherit;
     }
-    &__menu {
-        display: none;
-        @media @bw1020 {
-            display: flex;
-            width: 50px;
-            height: 24px;
-            gap: 60px;
-            background-color: transparent;
-            border: transparent;
-            margin-left: 10px;
+    
 
-        }
-        @media @bw768 {
-            display: flex;
-            width: 50px;
-            height: 24px;
-            gap: 60px;
-            background-color: transparent;
-            border: transparent;
-            margin-left: 10px;
-
-        }
-    }
-    &__nav-toggle {
-    /*...*/
-    &::before,
-    &::after {
-      /*...*/
-      transform-origin: 50% 50%;
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
-  }
     &__user {
         width: 0;
                 @media @bw1020 {
@@ -168,12 +149,42 @@
             height: 24px;
         }
     }
+    &__btn{ @media @bw768 {
+            display: none;
+        }}
+    
     &__btn {
-                @media @bw1020 {
-            display: none;
-        }
-        @media @bw768 {
-            display: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border: 1px solid @black;
+    background-color: transparent;
+    justify-content: center;
+    outline: none;
+    color: @black;
+    font-family : "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    overflow: hidden;
+    cursor: pointer; /* Курсор указатель */
+
+    &:hover,
+    &::active {
+        color: @white;
+        background-color: @black;
+
+    }
+
+
+    }
+    &__user-icon{
+        display: block;
+        @media @bw1020 {
+            display: block;
+            margin: auto;
         }
     }
-    }
+}

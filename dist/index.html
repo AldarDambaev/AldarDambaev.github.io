@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="show-nav">
+<html lang="ru">
 <link rel="stylesheet" href="styles/styles.min.css">
 
 <head>
@@ -27,15 +27,14 @@
         <a class="page-header__nav-link" href="#">Контакты</a>
       </nav>
       <div class="page-header__right-block">
-        <a class="page-header__btn btn " href="#">Войти</a>
+        <a class="page-header__btn" href="#">Войти
+          <svg class="page-header__user-icon" width="24" height="24">
+            <use xlink:href="assets/images/user.svg">
+          </svg>
+        </a>
 
       </div>
-      <button href="#" class="page-header__menu">
-        <img class="page-header__user" src="assets/images/user.svg" alt="user">
-      </button>
-      <button href="#" class="page-header__menu" id="js-navToggle">
-        <img class="page-header__menu" src="assets/images/menu.svg" alt="menu">
-      </button>
+
     </div>
   </header>
   <main class="main">
@@ -331,9 +330,14 @@
 
       </section>
     </div>
-
-    <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
-
+    <div class="contacts_slogans">
+      <div class="contacts__slogan1">
+        <img class="slogan1" src="assets/images/slogan1.png" alt="slogan1">
+      </div>
+      <div class="contacts__slogan2">
+        <img class="slogan2" src="assets/images/slogan2.png" alt="slogan2">
+      </div>
+    </div>
   </main>
   <footer class="footer">
 
@@ -521,6 +525,6 @@
   </div>
 </body>
 <script src="scripts/jquery-3.7.1.min.js"></script>
-<script src="scripts/main.js"></script>
+<script src="scripts/main.min.js"></script>
 
 </html>
