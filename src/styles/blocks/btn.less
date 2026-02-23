@@ -1,23 +1,23 @@
 .btn {
     display: inline-block;
+    justify-content: center;
     box-sizing: border-box;
     padding: 15px 40px;
     border: 1px solid @black;
     background-color: transparent;
-    justify-content: center;
     outline: none;
     color: @black;
     font-family : "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    text-decoration: none; /* Убрать подчеркивание */
+    text-align: center;
+    text-decoration: none; 
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     overflow: hidden;
-    cursor: pointer; /* Курсор указатель */
-
+    cursor: pointer; 
     &:hover,
-    &::active {
+    &:active {
         color: @white;
         background-color: @black;
         transition: color 0.2s, background-color 0.2s;

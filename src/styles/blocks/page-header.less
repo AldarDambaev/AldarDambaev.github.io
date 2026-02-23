@@ -11,6 +11,10 @@
     @media @bw1660 {
         height: 111px;
     }
+    @media @bw768 {
+        height: 70px;
+    }
+
 
     &::before {
         content: "";
@@ -20,8 +24,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-            backdrop-filter: blur(20px);
-            background: rgba(222, 222, 222, 0.5);
+        backdrop-filter: blur(20px);
+        background: rgba(222, 222, 222, 0.5);
 
     }
     
@@ -97,16 +101,19 @@
 
     &__right-block{
         width: 202px;
-        padding-right: 253px;
-                @media @bw1020 {
-            width: 150px;
-            margin-left: auto;
-        }
-        @media @bw1660 {
+
+         @media @bw1660 {
             width: 152px;
         }
+         @media @bw1020 {
+            display: flex;
+            gap: 30px;
+            width: auto;
+            margin-left: auto;
+        }
+       
         @media @bw768 {
-            width: 150px;
+            gap: 13px;
         }
     }
 
@@ -119,16 +126,22 @@
         display: flex;
         align-items: center; // Центрируем по вертикали
         justify-content: center; // Центрируем по горизонтали
-        padding-left: 253px;
+
+        @media @bw1660 {
+            width: 152px;
+            height: 111px;
+        }
                 @media @bw1020 {
             width: 152px;
             height: 111px;
-            padding-left: 30px;
+
         }
         @media @bw768 {
-            width: 152px;
-            height: 111px;
-            padding-left: 30px;
+            width: 96px;
+            height: 70px;
+            left: -20px;
+            position: relative;
+
         }
     }
 
@@ -149,42 +162,84 @@
             height: 24px;
         }
     }
-    &__btn{ @media @bw768 {
-            display: none;
-        }}
-    
-    &__btn {
-    display: inline-block;
+    &__btn { 
+    display: inline-flex; /* Меняем на flex для лучшего выравнивания */
+    align-items: center;  /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
     box-sizing: border-box;
     padding: 15px 40px;
     border: 1px solid @black;
     background-color: transparent;
-    justify-content: center;
     outline: none;
     color: @black;
-    font-family : "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    text-decoration: none; /* Убрать подчеркивание */
+    text-align: center;
+    text-decoration: none; 
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     overflow: hidden;
-    cursor: pointer; /* Курсор указатель */
+    cursor: pointer; 
+    
+    @media @bw1020 {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+        font-size: 0;
+    }
 
     &:hover,
-    &::active {
+    &:active {
         color: @white;
         background-color: @black;
-
+        transition: color 0.2s, background-color 0.2s;
     }
-
-
+}
+    
+    
+    &__user-icon {
+    display: none; /* Скрыто на десктопе */
+    
+    @media @bw1020 {
+        display: block; /* Показываем на мобильных */
+        width: 25px; /* Устанавливаем конкретный размер */
+        height: 25px;
+        margin: 0; /* Убираем все margin */
+        padding: 0; /* Убираем все padding */
     }
-    &__user-icon{
-        display: block;
+}
+    &__nav-toggle {
+        display: none;
         @media @bw1020 {
             display: block;
-            margin: auto;
+            position: relative;
+            right: -11px;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: transparent;
+        }
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 19px;
+            left: 11px;
+            width: 18px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: @black;
+            transform-origin: 50% 50%;
+        }
+        &::before {
+            top: 13px;
+            box-shadow: 0 6px 0 @black;
+        }
+        &::after {
+            top: 25px;
         }
     }
 }
