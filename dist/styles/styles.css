@@ -1497,7 +1497,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
-  padding-left: -100px;
 }
 .page-header__nav-link {
   color: #1f1e1e;
@@ -1602,6 +1601,21 @@ body {
 }
 .page-header__nav-toggle::after {
   top: 25px;
+}
+.page-header__nav-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-header__nav-user-link {
+  text-decoration: none;
+}
+.page-header__nav-logout {
+  font-size: 0;
 }
 .about {
   max-width: 1334px;
@@ -2557,6 +2571,7 @@ body {
   }
   .page-header__nav {
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
@@ -2569,25 +2584,18 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
     padding: 211px 30px 30px;
-    background-color: rgba(222, 222, 222, 0.98);
-    -webkit-transition: -webkit-transform 0.4s;
-    transition: -webkit-transform 0.4s;
-    transition: transform 0.4s;
-    transition: transform 0.4s, -webkit-transform 0.4s;
+    backdrop-filter: blur(20px);
+    background: rgba(222, 222, 222, 0.5);
+    overflow-x: hidden;
+    overflow-y: auto;
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  @supports (background-filter: blur(20px)) {
-    .page-header__nav {
-      background-color: rgba(222, 222, 222, 0.7);
-      backdrop-filter: blur(20px);
-    }
   }
   .page-header__nav-link {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .page-header__right-block {
     display: -webkit-box;
@@ -2596,10 +2604,12 @@ body {
     gap: 30px;
     width: auto;
     margin-left: auto;
+    z-index: 1;
   }
   .page-header__logo {
     width: 152px;
     height: 111px;
+    z-index: 1;
   }
   .page-header__user {
     width: 24px;
@@ -2763,7 +2773,9 @@ body {
     padding: 150px 20px 30px;
   }
   .page-header__nav-link {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .page-header__right-block {
     gap: 13px;
