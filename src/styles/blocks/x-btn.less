@@ -14,11 +14,20 @@
     background-color: @black;
     transition: background-color 0.2s;
     background-image: 'assets/svg-sprite/close.svg';
-    &:hover,
+    @media @bw768 {
+        width: 36px;
+        height: 36px;
+    }
+    &:hover {
+        @media (hover: hover) {
+            background-color: @red_dark;
+        }
+    }
     &:active {
-        background-color: @red;
+        background-color: @red_dark;
     }
     &__icon {
+        margin: auto;
         color: @white;
         pointer-events: none;
     }

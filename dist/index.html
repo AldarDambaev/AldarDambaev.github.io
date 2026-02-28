@@ -40,7 +40,7 @@
             <use xlink:href="assets/images/user.svg">
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
 
     </div>
@@ -64,7 +64,7 @@
           </div>
           <div class="want__btns">
             <a href="#" class="btn want__btn--event">
-              <span class="want__btn-text">Провести мероприятие</span>
+              <span class="want__btn-text" id="js-eventOpenBtn">Провести мероприятие</span>
             </a>
             <a href="#" class="btn want__btn--rent">
               <span class="want__btn-text">Стать арендатором</span>
@@ -406,10 +406,10 @@
     </div>
 
   </footer>
-  <div class="pp" id="eventPP">
+  <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button type="button" class="pp_x-btn x-btn">
+        <button type="button" title="Закрыть" class="pp_x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="12" height="12">
             <use xlink:href="assets/icons/symbols.svg#close">
           </svg>

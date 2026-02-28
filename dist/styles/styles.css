@@ -992,11 +992,11 @@ textarea {
   transition: background-color 0.2s;
   background-image: 'assets/svg-sprite/close.svg';
 }
-.x-btn:hover,
 .x-btn:active {
-  background-color: #bc3324;
+  background-color: #a51505;
 }
 .x-btn__icon {
+  margin: auto;
   color: #ffffff;
   pointer-events: none;
 }
@@ -1616,6 +1616,18 @@ body {
 }
 .page-header__nav-logout {
   font-size: 0;
+}
+.show-nav .page-header__nav-toggle::before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(0, 6px) rotate(45deg);
+      -ms-transform: translate(0, 6px) rotate(45deg);
+          transform: translate(0, 6px) rotate(45deg);
+}
+.show-nav .page-header__nav-toggle::after {
+  -webkit-transform: translate(0, -6px) rotate(-45deg);
+      -ms-transform: translate(0, -6px) rotate(-45deg);
+          transform: translate(0, -6px) rotate(-45deg);
 }
 .about {
   max-width: 1334px;
@@ -2591,6 +2603,10 @@ body {
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
   }
   .page-header__nav-link {
     display: -webkit-box;
@@ -2658,6 +2674,14 @@ body {
         -ms-transform: translateX(0);
             transform: translateX(0);
   }
+  .show-nav body {
+    overflow: hidden;
+  }
+  .show-nav .page-header__nav {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
   .show-nav .page-header__menu::before {
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -2677,6 +2701,10 @@ body {
   }
   .footer__nav-link {
     font-size: 0px;
+  }
+  .x-btn {
+    width: 36px;
+    height: 36px;
   }
   .table {
     display: block;
@@ -2864,5 +2892,10 @@ body {
   .article__container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+@media (hover: hover) {
+  .x-btn:hover {
+    background-color: #a51505;
   }
 }
