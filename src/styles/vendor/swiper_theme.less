@@ -1,0 +1,30 @@
+.swiper-slide {
+    height: auto;
+    display: flex;
+}
+.swiper--3s {
+    width: 100%;
+    .swiper-slide {
+        box-sizing: border-box;
+        padding-right: 60px;
+        min-width: 340px;
+        width: calc(33.3333% + 20px);
+    }
+    & > * {
+        width: 100%;
+    }
+
+    .event-card {
+        &__link {
+            cursor: pointer;
+            cursor: grab;
+            &:active {
+                cursor: pointer;
+                cursor: grabbing;
+            }
+        }
+        &__title {
+            cursor: pointer;
+        }
+    }
+}

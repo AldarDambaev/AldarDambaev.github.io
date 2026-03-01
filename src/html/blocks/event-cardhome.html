@@ -1,10 +1,15 @@
 <section class="home__events">
-<h2 class="section-title section-title__events">Мероприятия</h2>
-	<div class="listing__events-list">
-            <!-- prettier-ignore -->
+    <h2 class="section-title section-title__events">Мероприятия</h2>
+    
+    <div class="events-slider">
+        
+        
+        <div class="slider-container">
+            <div class="listing__events-list slider-track">
+                <!-- prettier-ignore -->
                 @@loop('blocks/event-card.html', [
                     {
-                        "class": "listing_event-card",
+                        "class": "listing_event-card slider-slide",
                         "img": "assets/images/events/Nirvana.jpg",
                         "img_webp": "assets/images/events/Nirvana.webp",
                         "img_tablet": "assets/images/events/Nirvana_768.jpg",
@@ -16,7 +21,7 @@
                         "datetime": "2024-12-07T18:00",
                     },
                     {
-                        "class": "listing_event-card",
+                        "class": "listing_event-card slider-slide",
                         "img": "assets/images/events/Nirvana.jpg",
                         "img_webp": "assets/images/events/Nirvana.webp",
                         "img_tablet": "assets/images/events/Nirvana_768.jpg",
@@ -27,8 +32,8 @@
                         "time": "14.12.2024 | начало 18.30",
                         "datetime": "2024-12-14T18:30",
                     },
-					{
-                        "class": "listing_event-card",
+                    {
+                        "class": "listing_event-card slider-slide",
                         "img": "assets/images/events/Nirvana.jpg",
                         "img_webp": "assets/images/events/Nirvana.webp",
                         "img_tablet": "assets/images/events/Nirvana_768.jpg",
@@ -41,5 +46,18 @@
                     }
                 ])
             </div>
-			<a href="#" class="listing__link">Смотреть все</a>
-	</section>
+        </div>
+        <div class="slider-btn">
+        <button class="slider-btn slider-btn-prev" aria-label="Предыдущий слайд">
+            <img src="assets/images/link.png" alt="Предыдущий">
+        </button>
+        <button class="slider-btn slider-btn-next" aria-label="Следующий слайд">
+            <img src="assets/images/link.png" alt="Следующий">
+        </button>
+    </div>
+    </div>
+    
+    <div class="view-all-container">
+        <a href="#" class="view-all-link">Смотреть все</a>
+    </div>
+</section>
