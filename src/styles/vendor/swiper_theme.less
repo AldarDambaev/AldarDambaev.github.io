@@ -28,3 +28,42 @@
         }
     }
 }
+
+.swiper-footer {
+    margin: 70px auto 0;
+    display: flex;
+    justify-content: space-between;
+    min-width: 522px;
+    width: 100%;
+    gap: 20px;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    margin: 0 auto;
+    .swiper-pagination-bullet{
+        margin: 2px 3px;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: @gray_dark;
+    opacity: 1;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    background-clip: padding-box ;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: @black;
+
+}
