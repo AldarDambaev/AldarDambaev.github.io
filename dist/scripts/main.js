@@ -1,5 +1,5 @@
 (function() {
-    "use script";
+    "use strict";
     const root = document.documentElement;
     const navToggle = document.querySelector("#js-navToggle");
 
@@ -7,12 +7,9 @@
         root.classList.toggle("show-nav");
     });
 
-    const eventPP = document.querySelector("#js-eventPP");
-
-
-
+    const eventPP = document.querySelector("#js-eventPP")
     if (eventPP) {
-        const eventOpenBtn = document.querySelector("#eventOpenBtn");
+        const eventOpenBtn = document.querySelector("#js-eventOpenBtn");
 
         const closeEventPP = function(event) {
             function close() {
@@ -35,9 +32,32 @@
 
         eventOpenBtn.addEventListener("click", function() {
             document.addEventListener("keyup", closeEventPP);
-            event.addEventListener("click", closeEventPP);
+            eventPP.addEventListener("click", closeEventPP);
         });
 
 
     }
+
+    let swipers = document.querySelectorAll(".js-swiper")
+
+    swipers.forEach(function(swpr){
+        new Swiper(swpr, {
+            updateOnWindowResize: true,
+            slidesPerView: 3,
+            freeMode: true,
+            spaceBetween: 20,
+            speed: 500,
+            grabCursor: true,
+            pagination: {
+                el: swpr.querySelector(".swiper-pagination"),
+                clickable: true
+            },
+            navigation: {
+                nextEl: swpr.querySelector(".swiper-arrow-next"),
+                prevEl: swpr.querySelector(".swiper-arrow-prev"),
+                disabledClass: "arrow--disabled"
+            }
+        });
+
+    });
 })();
