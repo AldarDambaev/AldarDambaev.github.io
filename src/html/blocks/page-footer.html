@@ -16,21 +16,40 @@
                     <a href="#" class="footer__nav-link">Наши проекты</a>                    
                     <a href="#" class="footer__nav-link">Контакты</a>
                 </nav>
-                <label class="footer__sub ">
-                        <span class="field__label"><b>Подпишись и будь в курсе происходящего</b></span>
-                        <div class="footer__email">
-                        <input class="footer__input" type="email" name="email" placeholder="Email" required/>
-                        <a href="#" class="footer__sub-btn">
-                            <span >Подписаться</span>
-                        </a>
-                        
+
+
+
+                <form 
+                    action="https://jsonplaceholder.typicode.com/posts" 
+                    class="footer__sub" 
+                    id="js-subscribeForm"
+                    method="POST"
+                >
+                    <span class="field__label"><b>Подпишись и будь в курсе происходящего</b></span>
+                    
+                    <div class="footer__email">
+                        <input 
+                            class="footer__input" 
+                            type="email" 
+                            name="email" 
+                            placeholder="Email" 
+                            required 
+                            id="js-subscribeEmail"
+                        />
+                        <button type="submit" class="footer__sub-btn">
+                            <span>Подписаться</span>
+                        </button>
                     </div>
+                    
                     <label class="check form__check">
                         <input class="check__input" type="checkbox" name="agree" required checked>
                         <span class="check__mark"></span>
                         <span class="check__label check__label--fz14">Согласен на обработку персональных данных</span>
                     </label>
-                    </label> 
+                </form>
+
+
+
             </div>
             <div class="footer__column2">
                 <div class="footer__last1">

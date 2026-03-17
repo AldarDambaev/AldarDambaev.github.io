@@ -1,3 +1,5 @@
+const { data } = require("autoprefixer");
+
 (function () {
   if (!$ || !$.validator) return;
 
@@ -49,4 +51,44 @@
         errorElement: "span"
     });
   }   
+
+
+
+const subscribeForm = $('#js-subscribeForm');
+
+if (subscribeForm.length) {
+    const subscribeAction = subscribeForm.attr("action");
+    const subscribeEmail = subscribeForm.find("#js-subscribeEmail");
+
+    subscribeForm.validate({
+        errorElement: "span",
+        submitHandler: function(form) {
+            // Здесь form - это DOM элемент, а не jQuery объект
+            $.ajax({
+                url: subscribeAction,
+                method: "POST",
+                data: {
+                    email: subscribeEmail.val()
+                },
+                success: function() {
+                    subscribeEmail.val("");
+                    subscribeEmail.blur();
+                    alert("Вы успешно подписались на рассылку новостей!");
+                },
+                error: function() {
+                    alert("Что-то пошло не так, попробуйте еще раз.");
+                }
+            });
+            return false; // Важно! Предотвращает стандартную отправку формы
+        }
+    });
+    
+    // Дополнительная защита от отправки формы
+    subscribeForm.on('submit', function(e) {
+        e.preventDefault();
+        return false;
+    });
+}
+
+
 })();
