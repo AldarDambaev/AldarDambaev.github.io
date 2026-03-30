@@ -11,11 +11,33 @@
       </div>
 
       <nav class="page-header__nav">
-        <button type="button" class="page-header__nav-item">Главная</button>
+        <button 
+        type="button" 
+        class="page-header__nav-item" 
+        :class="{'page-header__nav-item--active': activeTab === 'home'}"
+        @click="setTab('home')"
+        >
+        Главная
+      </button>
 
-        <button type="button" class="page-header__nav-item">Правила</button>
+        <button 
+        type="button" 
+        class="page-header__nav-item" 
+        :class="{'page-header__nav-item--active': activeTab === 'rules'}"
+        @click="setTab('rules')"
+        >
+        Правила
+      </button>
 
-        <button type="button" class="page-header__nav-item">Контакты</button>
+        <button 
+        type="button" 
+        class="page-header__nav-item" 
+        :class="{'page-header__nav-item--active': activeTab === 'contacts'}"
+        @click="setTab('contacts')"
+        >
+        Контакты
+      </button>
+
       </nav>
     </div>
   </header>
@@ -28,6 +50,18 @@
     components: {
       SvgLogo,
     },
+    emits: ["setTab"],
+    props: {
+      activeTab: {
+        type: String,
+        default: ""
+      },
+    },
+    methods: {
+      setTab(value) {
+        this.$emit("setTab", value)
+      }
+    }
   };
 </script>
 
