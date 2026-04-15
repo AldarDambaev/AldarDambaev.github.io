@@ -6,23 +6,40 @@
       <p class="page-contacts__text">
         Адрес:
         <span class="page-contacts__text-italic">
-          г. Томск, ул. Красноармейская, 146
+          {{query.addres || "г. Томск, ул. Красноармейская, 146"}}
         </span>
       </p>
       <p class="page-contacts__text">
         Телефон:
-        <span class="page-contacts__text-italic"> (3822) 90-72-56 </span>
+        <span class="page-contacts__text-italic"> {{query.phone || "(3822) 90-72-56"}} </span>
       </p>
       <p class="page-contacts__text">
         Email:
-        <span class="page-contacts__text-italic"> idat@tusur.ru </span>
+        <span class="page-contacts__text-italic"> {{query.email || "idat@tusur.ru"}} </span>
+      </p>
+      <p class="page-contacts__text">
+        Контактное лицо:
+        <span class="page-contacts__text-italic">
+          {{ userStore.fullName }}
+        </span>
       </p>
     </div>
   </div>
 </template>
 
 <script>
-  export default {};
+  import { mapStores } from "pinia";
+  import { useUserStore } from "@/store/user";
+
+
+export default {
+  computed: {
+    ...mapStores(useUserStore),
+    query(){
+      return this.$route.query
+    }
+  }
+}
 </script>
 
 <style lang="less">

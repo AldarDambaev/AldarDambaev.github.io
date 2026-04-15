@@ -1,6 +1,6 @@
 <template>
         <div class="list-articles__card card-article">
-          <h4 class="card-article__title">
+          <h4 class="card-article__title" @click="$router.push({ name: 'blogArticle', params: { id: id } })">
             {{ title }}
           </h4>
 
@@ -14,6 +14,10 @@
 <script>
   export default {
     props: {
+      id: {
+        type: [Number, String],
+        required: true,
+      },
       title: {
         type: String,
         default: "",
@@ -30,7 +34,7 @@
   .card-article {
     box-sizing: border-box;
     position: relative;
-    margin: 0 30px 0 30px;
+    margin: 0;
     padding: 20px 30px 20px 15px;
     box-shadow: 0 0 5px 1px @brown;
     background-color: @white;

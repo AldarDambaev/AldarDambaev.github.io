@@ -1,6 +1,6 @@
 <template>
-<header class="page-header">
-  <div class="page-header__container">
+  <header class="page-header">
+    <div class="page-header__container">
     <div class="page-header__logo-wrap">
       <SvgLogo class="page-header__logo"/>
       <h4 class="page-header__logo-text">
@@ -10,34 +10,15 @@
         <div class="page-header__logo-circle"></div>
       </div>
 
-      <nav class="page-header__nav">
-        <button 
-        type="button" 
-        class="page-header__nav-item" 
-        :class="{'page-header__nav-item--active': activeTab === 'home'}"
-        @click="setTab('home')"
+<nav class="page-header__nav">
+        <RouterLink
+          v-for="link in links"
+          :key="link.path"
+          class="page-header__nav-item"
+          :to="link.path"
         >
-        Главная
-      </button>
-
-        <button 
-        type="button" 
-        class="page-header__nav-item" 
-        :class="{'page-header__nav-item--active': activeTab === 'rules'}"
-        @click="setTab('rules')"
-        >
-        Правила
-      </button>
-
-        <button 
-        type="button" 
-        class="page-header__nav-item" 
-        :class="{'page-header__nav-item--active': activeTab === 'contacts'}"
-        @click="setTab('contacts')"
-        >
-        Контакты
-      </button>
-
+          {{ link.title }}
+        </RouterLink>
       </nav>
     </div>
   </header>
@@ -50,18 +31,25 @@
     components: {
       SvgLogo,
     },
-    emits: ["setTab"],
-    props: {
-      activeTab: {
-        type: String,
-        default: ""
-      },
+
+    data() {
+      return {
+        links: [
+          {
+            title: "Главная",
+            path: "/",
+          },
+          {
+            title: "Правила",
+            path: "/rules",
+          },
+          {
+            title: "Контакты",
+            path: "/contacts",
+          },
+        ],
+      };
     },
-    methods: {
-      setTab(value) {
-        this.$emit("setTab", value)
-      }
-    }
   };
 </script>
 
@@ -131,6 +119,7 @@ z-index: 100;
     & + & {
       margin-left: 20px;
     }
+    
 
     &:hover {
       @media (hover: hover) {
@@ -143,6 +132,7 @@ z-index: 100;
     &.router-link-exact-active {
       color: @light_orange;
     }
+
   }
 }
 </style>
